@@ -14,3 +14,13 @@ Orden: Parentesis Interno, Parentesis externo, Division
 3 * ((4 + 5) / (18 / 6) - 4) 
 Orden: Los dos Parentesis internos, Division Parentesis externo, Resta Parentesis, Multiplicacion
 """
+print(12*4+4*5)
+print(12 * (4 + 4) * 5)
+print(5 * 4 / 2 )
+print(5 * (4 / 2))
+print((12 + (12 + 6 * 4)) / 3)
+print(3 * ((4 + 5) / (18 / 6) - 4))
+
+
+
+
