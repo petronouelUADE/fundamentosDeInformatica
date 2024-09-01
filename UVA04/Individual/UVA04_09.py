@@ -14,6 +14,55 @@ Estado Civil: Soltero/Casado
 """
 """
 Pseudocodigo:
+INICIO
+  Inicializar net_salary en Ninguno
+  Establecer single_tenure_increase en 0.05
+  Establecer married_tenure_increase en 0.07
+  Establecer retirement_tax en 0.11
+  Establecer union_tax en 0.03
+  Establecer insurance_tax en 0.03
+
+  Solicitar al usuario que ingrese el sueldo básico (basic_salary)
+  MIENTRAS basic_salary sea menor o igual a 0 HACER
+    Solicitar al usuario que ingrese un sueldo base válido
+  FIN MIENTRAS
+
+  Solicitar al usuario que ingrese los años de antigüedad (tenure)
+  MIENTRAS tenure sea menor que 0 HACER
+    Solicitar al usuario que ingrese una antigüedad mayor o igual a 0
+  FIN MIENTRAS
+
+  Solicitar al usuario que indique su estado civil (marital_status)
+  MIENTRAS marital_status no sea "s" y no sea "c" HACER
+    Solicitar al usuario que ingrese "s" para Soltero o "c" para Casado
+  FIN MIENTRAS
+
+  SI marital_status es "s" ENTONCES
+    Establecer salary_increase en single_tenure_increase
+    Establecer marital_status en "Soltero(a)"
+  SINO
+    Establecer salary_increase en married_tenure_increase
+    Establecer marital_status en "Casado(a)"
+  FIN SI
+
+  Inicializar gross_salary con basic_salary
+  PARA cada año en el rango de tenure HACER
+    Incrementar gross_salary en gross_salary * salary_increase
+  FIN PARA
+
+  Calcular retirement_discount como gross_salary * retirement_tax
+  Calcular insurance_discount como gross_salary * insurance_tax
+  Calcular union_discount como gross_salary * union_tax
+  Calcular net_salary como gross_salary - retirement_discount - union_discount - insurance_discount
+
+  IMPRIMIR "Estado Civil:", marital_status
+  IMPRIMIR "Sueldo Básico:", basic_salary, "| Antigüedad:", tenure, "Años | Importe Bruto:", gross_salary
+  IMPRIMIR "Descuentos:"
+  IMPRIMIR "Jubilación:", retirement_discount
+  IMPRIMIR "Obra Social:", insurance_discount
+  IMPRIMIR "Sindicato:", union_discount
+  IMPRIMIR "Sueldo Neto:", net_salary
+FIN
 """
 net_salary = None
 single_tenure_increase = 0.05
