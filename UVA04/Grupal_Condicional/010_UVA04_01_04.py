@@ -34,7 +34,7 @@ MAX_SCORE = 10
 PROMOTION_SCORE = 7
 
 
-if partial_grade_A > MAX_SCORE and partial_grade_A < MIN_SCORE or partial_grade_B > MAX_SCORE and partial_grade_B < MIN_SCORE:
+if partial_grade_A > MAX_SCORE or partial_grade_A < MIN_SCORE and partial_grade_B > MAX_SCORE or partial_grade_B < MIN_SCORE:
     print("Una de las notas no es valida")
 elif partial_grade_A >= PROMOTION_SCORE and partial_grade_B >= PROMOTION_SCORE:
     print("Aprueba Y Promociona")
@@ -43,6 +43,5 @@ elif partial_grade_A >= 4 and partial_grade_B >= 4:
 else:
     print("Recupera")
     
-
     
 
