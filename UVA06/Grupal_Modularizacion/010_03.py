@@ -90,7 +90,7 @@ def app():
         else:
             print("Operación no válida. Solo se acepta 1 para descuento, 2 para recargo o -1 para salir.")
 
-        # Pedir nueva operación
+        
         operacion = int(input("Ingrese 1 para aplicar descuento, 2 para aplicar recargo, o -1 para salir\n"))
 
     print(f"Monto total acumulado: {monto_total}")
