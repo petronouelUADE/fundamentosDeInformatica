@@ -1,0 +1,24 @@
+# Leer la cantidad de términos
+cantidad_terminos = int(input("Ingrese la cantidad de términos a generar:\n"))
+
+# Inicializar variables
+primer_termino = 1
+suma_terminos = primer_termino
+
+# Imprimir el primer término
+print(primer_termino)
+
+# Generar los siguientes términos de la serie
+for i in range(1, cantidad_terminos):
+    # El siguiente término es el doble del anterior más 5
+    siguiente_termino = primer_termino * 2 + 5
+    print(siguiente_termino)
+    
+    # Sumar el término actual a la suma total
+    suma_terminos += siguiente_termino
+    
+    # Actualizar el primer término al siguiente para la próxima iteración
+    primer_termino = siguiente_termino
+
+# Mostrar la suma de los términos generados
+print(f"Suma de los términos generados: {suma_terminos}")
