@@ -13,4 +13,4 @@ def title(text, asterixLenght):
     asterixs = "*" * asterixLenght
     return print(f"{asterixs}\n\n  {text}\n\n{asterixs}")
 
-title("Ejercicio 3", 15)
+title("Aprendiendo Funciones", 15)
