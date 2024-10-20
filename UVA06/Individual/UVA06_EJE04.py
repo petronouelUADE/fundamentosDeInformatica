@@ -9,11 +9,12 @@ Ejercicio 3
 *************** 
 """
 import math
+import random
 def title(text, asterixLenght):
     asterixs = "*" * asterixLenght
     return print(f"{asterixs}\n\n  {text}\n\n{asterixs}")
 
-title("Sumar y Extraer", 40 )
+
 
 
 def sumar(numero):
@@ -28,7 +29,7 @@ def extraer(numero,posicion):
     multiplicador = 1 if numero > 0 else -1
     result = 0
     cantDigitos = int(math.log10(abs(numero))) + 1
-    print
+    
     if posicion < cantDigitos:
         for digito in range(0,posicion + 1):
             digito = numero % 10
@@ -40,12 +41,30 @@ def extraer(numero,posicion):
     if posicion == cantDigitos : result *= multiplicador 
     
     return(result)
-        
+
+def middleDigit(numero):
+    numero = numero/100
+    return  numero%10
     
+          
+def app():
+    title("Sumar y Extraer", 40 )
+    num = 1
+    contador = 0
+    while middleDigit(num) != 0:
+        num = random.randint(10000,99999)
+        print(f"Numero randomizado: {num}")
+        print(f"La suma es {sumar(num)}")
+        print(f"Extraemos posicion 3 : {extraer(num,3)}")
+        contador +=1 
+    print(f"Guankata El numero tiene un cero en el centro {num}")
+    print(f"Se ejecuto {contador} veces hasta llegar al resultado")
     
-print(extraer(987654,5))
+app()    
+    
 
 
 
     
+
 
